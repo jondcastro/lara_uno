@@ -36,7 +36,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        
+        // print_r("create");
+
+        return view('users.create');
     }
 
     /**

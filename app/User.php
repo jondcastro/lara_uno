@@ -16,6 +16,8 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Notifications;
 
+
+//extender de Model para poder traer consultas
 // class User extends Authenticatable
 class User extends Model
 {
