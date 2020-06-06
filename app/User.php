@@ -3,15 +3,21 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+
+// por ahora no voy a usar autenticacion
+// use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 // importar este trait para poder usarlo
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-use Illuminate\Notifications
 
-class User extends Authenticatable
+use Illuminate\Database\Eloquent\Model;
+
+use Illuminate\Notifications;
+
+// class User extends Authenticatable
+class User extends Model
 {
     // podemos separar con comas para usar varios
     use Notifiable,SoftDeletes;

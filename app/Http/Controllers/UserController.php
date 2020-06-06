@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+//importar la instancia del modelo
+use App\User;
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,7 +17,16 @@ class UserController extends Controller
     public function index()
     {
         
-        dd('test');
+        // dd('test');
+
+        $users = User::all();
+
+        // print_r($users);
+
+        // dd($users);
+
+
+        return view('users.index')->with('users',$users);
     }
 
     /**
