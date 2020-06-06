@@ -6,9 +6,15 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+// importar este trait para poder usarlo
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+use Illuminate\Notifications
+
 class User extends Authenticatable
 {
-    use Notifiable;
+    // podemos separar con comas para usar varios
+    use Notifiable,SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','country','state'
     ];
 
     /**

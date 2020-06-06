@@ -11,6 +11,9 @@
 |
 */
 
+//cuando corremos migracion en .env normal, pero cuando quitamos el punto env dice
+// que esta en production
+
 Route::get('/', function () {
     return view('welcome');
 });
